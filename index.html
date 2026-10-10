@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#14171e">
+<meta name="description" content="1体10秒、合計100秒。チョップスティックスで10体のAIを倒す、指のタイムアタック。">
+<title>(☝ ՞ਊ ՞)☝ｳｪｰｲ ←このゲーム</title>
+<style>
+:root{color-scheme:dark;--bg:#14171e;--panel:#20242e;--line:#353a45;--ink:#f5f3e9;--muted:#a3a9b6;--lime:#d9fa69;--orange:#ff9867;--purple:#baa8ff;--danger:#ff717f;--mono:ui-monospace,SFMono-Regular,Consolas,monospace;--sans:"Arial","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif}
+*{box-sizing:border-box}html{min-height:100%;background:var(--bg)}body{margin:0;color:var(--ink);font-family:var(--sans);background:radial-gradient(ellipse at 0 10%,#242d283b,transparent 50%),var(--bg);-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer;touch-action:manipulation}button:disabled{cursor:default}button:focus-visible,a:focus-visible{outline:3px solid var(--lime);outline-offset:5px}button{color:inherit}svg{display:block}button,a{user-select:none}[hidden]{display:none!important}.app{width:min(100%,480px);margin:0 auto;padding:22px 22px max(22px,env(safe-area-inset-bottom))}.masthead{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}.wordmark{font-size:13px;letter-spacing:2.6px;font-weight:900;display:flex;align-items:center;gap:9px}.brand-mark{width:22px;height:24px;display:flex;gap:4px;align-items:center;transform:rotate(-18deg)}.brand-mark i{background:var(--lime);width:5px;height:23px;border-radius:8px}.brand-mark i+ i{height:17px}.tools{display:flex;gap:8px}.icon-button{background:transparent;border:1px solid var(--line);height:38px;min-width:38px;border-radius:50%;display:grid;place-items:center;font-size:16px}.icon-button:hover{background:var(--panel)}.eyebrow{font:700 11px var(--mono);letter-spacing:2.4px;color:var(--lime)}.hero{position:relative;margin-top:38px}.hero h1{font-size:42px;line-height:1.27;letter-spacing:-2px;margin:18px 0 7px;font-weight:900}.hero h1 span{color:var(--lime)}.hero p{font-size:13px;color:var(--muted);line-height:1.9;margin:0}.ten-art{height:194px;display:flex;justify-content:center;align-items:center;position:relative;margin:16px 0 20px;border-bottom:1px solid var(--line);overflow:hidden}.ten-art:before{content:"";position:absolute;width:168px;height:168px;border:1px solid #3c443e;border-radius:50%;left:calc(50% - 84px);top:11px}.ten-art:after{content:"";position:absolute;width:194px;height:194px;border:1px dashed #3c443e;border-radius:50%;left:calc(50% - 97px);top:-2px}.big-ten{font:900 176px/1 var(--sans);letter-spacing:-17px;color:var(--lime);transform:rotate(-7deg);padding-right:14px;position:relative;z-index:1}.art-tag{position:absolute;right:10px;bottom:23px;z-index:2;background:var(--orange);color:var(--bg);font:800 10px var(--mono);letter-spacing:1px;border-radius:5px;padding:8px 11px;transform:rotate(-7deg)}.hero-hand{position:absolute;left:16px;bottom:21px;color:var(--purple);width:70px;transform:rotate(-13deg);z-index:2}.specs{display:grid;grid-template-columns:1fr 1fr 1fr;margin:24px 0 28px;gap:5px}.spec{text-align:center;border-right:1px solid var(--line)}.spec:last-child{border-right:0}.spec strong{display:block;font:800 26px var(--mono)}.spec strong small{font:700 12px var(--sans);padding-left:3px}.spec span{font-size:10px;color:var(--muted);display:block;margin-top:6px;letter-spacing:.5px}.primary{width:100%;min-height:58px;border:0;border-radius:13px;background:var(--lime);color:var(--bg);font-size:15px;font-weight:900;letter-spacing:.4px;display:flex;align-items:center;justify-content:center;gap:16px;box-shadow:0 4px 0 #829744;transition:transform .12s}.primary:active{transform:translateY(3px);box-shadow:0 1px 0 #829744}.primary .arrow{font-size:23px}.start-note{text-align:center;color:var(--muted);font-size:10px;line-height:1.9;margin:16px 0 0}.best-line{display:flex;align-items:center;justify-content:space-between;margin:25px 0 0;border:1px solid var(--line);border-radius:11px;padding:15px 17px}.best-line span{font:700 10px var(--mono);color:var(--muted);letter-spacing:1.5px}.best-line strong{font:700 17px var(--mono);color:var(--orange)}.mini-instruction{display:flex;gap:12px;align-items:center;font-size:12px;color:var(--muted);margin-top:24px}.mini-instruction b{color:var(--ink)}.step-bubble{display:grid;place-items:center;background:var(--panel);border:1px solid var(--line);border-radius:50%;width:28px;height:28px;font:700 11px var(--mono);flex-shrink:0}.footer{text-align:center;font:10px var(--mono);letter-spacing:1.4px;color:#69707e;margin-top:30px}.game .masthead{margin-bottom:18px}.run-summary{display:flex;justify-content:space-between;align-items:flex-end}.label{font:700 10px var(--mono);letter-spacing:1.7px;color:var(--muted)}.elapsed{font:700 34px var(--mono);letter-spacing:-1.8px;margin-top:6px;font-variant-numeric:tabular-nums}.elapsed small{font-size:17px;color:var(--muted);letter-spacing:-.5px}.progress-count{font:700 28px var(--mono);color:var(--lime)}.progress-count small{font-size:12px;color:var(--muted)}.progress-dots{display:grid;grid-template-columns:repeat(10,1fr);gap:5px;margin:17px 0 20px}.progress-dot{height:5px;border-radius:8px;background:var(--line)}.progress-dot.done{background:var(--lime)}.progress-dot.current{background:var(--orange)}.battle{position:relative;border:1px solid var(--line);border-radius:21px;padding:18px 16px 14px;background:linear-gradient(155deg,#242832,#1b1f28);overflow:hidden}.player-label{display:flex;align-items:center;justify-content:space-between;gap:8px}.player-identity{display:flex;align-items:center;gap:10px}.avatar{width:36px;height:36px;background:var(--purple);color:var(--bg);border-radius:10px;display:grid;place-items:center;font:900 17px var(--mono);transform:rotate(-5deg)}.player-identity .name{font-size:13px;font-weight:800;line-height:1.5}.player-identity .subtitle{display:block;font:10px var(--mono);color:var(--muted);letter-spacing:1px;margin-top:1px}.chip{font:700 9px var(--mono);color:var(--purple);border:1px solid #baa8ff55;border-radius:5px;padding:5px 7px;white-space:nowrap}.chip.you{color:var(--lime);border-color:#d9fa6955}.hands{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:13px 0}.hand{position:relative;background:#171b23;border:1.5px solid #3b414d;border-radius:15px;padding:7px 8px 9px;height:126px;display:flex;align-items:center;flex-direction:column;justify-content:center;color:var(--purple);transition:border-color .12s,background .12s,transform .12s;overflow:hidden}.hand.you{color:var(--lime)}.hand .graphic{height:78px;width:72px;flex-shrink:0}.hand .graphic.left{transform:scaleX(-1)}.hand .hand-info{display:flex;align-items:baseline;gap:5px;font:900 21px var(--mono);line-height:1.1}.hand .hand-info small{font:400 10px var(--sans);color:var(--muted)}.hand .hand-side{position:absolute;top:9px;left:10px;font:10px var(--sans);color:var(--muted)}.hand.dead{color:#545b6a;background:#1b1f27;border-style:dashed;opacity:.65}.hand.dead .hand-info{font:700 11px var(--mono);letter-spacing:2px}.hand.selected{background:#d9fa6915;border-color:var(--lime);box-shadow:inset 0 0 0 1px var(--lime)}.hand.targetable{border-color:var(--purple);background:#baa8ff0b}.hand.targetable:after{content:"TAP";position:absolute;right:8px;top:9px;font:800 9px var(--mono);background:var(--purple);color:var(--bg);padding:3px 4px;border-radius:4px}.hand.you:not(:disabled):active,.hand.targetable:active{transform:scale(.96)}.hand.hit{animation:hit .32s ease}.turn-center{display:flex;align-items:center;gap:14px;padding:11px 0 14px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:2px 0 14px;min-height:77px}.clock{position:relative;height:52px;width:52px;flex-shrink:0;color:var(--lime)}.clock svg{position:absolute;inset:0;width:52px;height:52px;transform:rotate(-90deg)}.clock circle{fill:none;stroke-width:3}.clock .clock-track{stroke:var(--line)}.clock .clock-progress{stroke:currentColor;stroke-linecap:round;stroke-dasharray:138.23;stroke-dashoffset:0}.clock strong{position:absolute;inset:0;display:grid;place-items:center;font:800 17px var(--mono)}.clock.urgent{color:var(--danger)}.turn-copy{flex:1}.turn-copy strong{display:block;font-size:13px;line-height:1.6}.turn-copy span{display:block;font-size:10px;color:var(--muted);line-height:1.5;margin-top:3px}.turn-tag{font:800 10px var(--mono);letter-spacing:1px;color:var(--lime)}.turn-tag.cpu{color:var(--purple)}.you-identity .avatar{background:var(--lime);transform:rotate(5deg)}.action-log{min-height:24px;text-align:center;font-size:11px;color:var(--muted);line-height:1.5;margin:14px 0 12px}.game-bottom{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:10px;padding:4px 1px}.text-button{border:0;background:transparent;color:var(--muted);font-size:11px;min-height:36px;padding:5px 7px;text-decoration:underline;text-underline-offset:3px}.overlay{position:absolute;inset:0;background:#171b23ee;backdrop-filter:blur(8px);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:5;padding:24px;text-align:center}.overlay .overlay-kicker{font:700 11px var(--mono);color:var(--orange);letter-spacing:2px}.overlay .overlay-number{font:900 80px/1 var(--mono);color:var(--lime);margin:17px 0}.overlay h2{font-size:28px;margin:17px 0 8px;font-weight:900}.overlay p{font-size:12px;color:var(--muted);margin:0;line-height:1.9}.overlay.lose h2{color:var(--danger)}.overlay .small-stamp{font:800 11px var(--mono);letter-spacing:3px;color:var(--lime)}.result{padding-top:26px;text-align:center}.result .eyebrow{margin-top:18px}.clear-title{font-size:39px;letter-spacing:-2px;line-height:1.2;margin:15px 0 6px}.clear-title span{color:var(--lime)}.result-sub{color:var(--muted);font-size:12px;line-height:1.8}.result-ten{font:900 92px/1 var(--mono);color:var(--lime);margin:25px auto 18px;width:152px;height:152px;border:1px solid #d9fa6955;border-radius:50%;display:grid;place-items:center;position:relative}.result-ten:after{content:"ALL CLEAR";position:absolute;bottom:17px;font:700 9px var(--mono);letter-spacing:2px;color:var(--muted)}.record-card{margin-top:24px;padding:22px 18px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}.record-time{font:800 46px var(--mono);color:var(--orange);letter-spacing:-2px;margin:10px 0 12px;font-variant-numeric:tabular-nums}.record-time small{font-size:19px;letter-spacing:0}.new-record{font:700 10px var(--mono);letter-spacing:1.3px;background:var(--orange);color:var(--bg);padding:5px 8px;display:inline-block;border-radius:5px}.result-stats{display:grid;grid-template-columns:1fr 1fr;margin:22px 0;gap:10px;text-align:center}.result-stat{padding:12px;border:1px solid var(--line);border-radius:10px}.result-stat strong{display:block;font:800 23px var(--mono);margin-bottom:6px}.result-stat span{font-size:10px;color:var(--muted)}.secondary{width:100%;min-height:48px;background:transparent;border:1px solid var(--line);border-radius:12px;font-size:13px;font-weight:700;margin-top:13px}.split-list{text-align:left;margin-top:25px}.split-toggle{width:100%;display:flex;justify-content:space-between;background:transparent;border:0;padding:10px 0;color:var(--muted);font-size:12px}.splits{padding:0;margin:0;list-style:none}.splits li{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding:10px 0;color:var(--muted);font-size:11px}.splits b{font:700 12px var(--mono);color:var(--ink)}dialog{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:20px;width:min(420px,calc(100% - 32px));padding:24px;max-height:90dvh}dialog::backdrop{background:#080a10d9;backdrop-filter:blur(5px)}dialog h2{margin:3px 0 17px;font-size:22px}dialog p{font-size:12px;line-height:1.9;color:var(--muted)}.rule-list{list-style:none;margin:0 0 22px;padding:0;counter-reset:rule}.rule-list li{font-size:12px;line-height:1.8;padding:10px 0 10px 30px;position:relative;border-bottom:1px solid var(--line);color:var(--muted);counter-increment:rule}.rule-list li:before{content:counter(rule,decimal-leading-zero);font:700 10px var(--mono);position:absolute;left:0;top:14px;color:var(--lime)}.rule-list b{color:var(--ink)}.rule-example{font:700 17px var(--mono);color:var(--purple);padding:15px;background:var(--bg);border-radius:10px;text-align:center;margin:15px 0}.rule-example small{font:11px var(--sans);display:block;color:var(--muted);margin-top:9px}.toast{position:fixed;left:50%;bottom:max(22px,env(safe-area-inset-bottom));transform:translateX(-50%);z-index:20;border:1px solid var(--line);background:var(--ink);color:var(--bg);border-radius:10px;padding:12px 18px;font-size:12px;width:max-content;max-width:calc(100% - 36px);text-align:center;box-shadow:0 8px 30px #0005}.confetti{position:fixed;top:-20px;z-index:10;pointer-events:none;width:7px;height:13px;animation:confetti 1.9s ease-out forwards}.noscript{background:#ff717f22;padding:20px;color:var(--danger);font-size:13px;line-height:1.7}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@keyframes hit{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px);background:#ff986730}70%{transform:translateX(5px)}}@keyframes confetti{to{transform:translateY(105vh) rotate(620deg);opacity:0}}@media(min-width:700px){.app{padding-top:35px}.hero{margin-top:50px}.game .app{padding-top:26px}.battle{padding:22px 20px 18px}.hand{height:140px}.hand .graphic{height:86px;width:80px}.turn-center{padding:15px 0}.masthead{margin-bottom:34px}}@media(max-width:360px){.app{padding-left:16px;padding-right:16px}.hero h1{font-size:37px}.hand{height:112px}.hand .graphic{height:64px;width:60px}.battle{padding:15px 12px}.elapsed{font-size:30px}.hero{margin-top:26px}}@media(max-height:740px){.game .app{padding-top:12px}.game .masthead{margin-bottom:11px}.game .progress-dots{margin:12px 0 13px}.game .hand{height:112px}.game .hand .graphic{height:66px;width:62px}.game .battle{padding-top:14px}.game .turn-center{padding:8px 0;min-height:68px}.game .action-log{margin:9px 0 5px}.game .hands{margin:10px 0}.game .footer{margin-top:10px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.hero h1.game-title{font-size:clamp(22px,6.2vw,29px);letter-spacing:-.5px;line-height:1.5;white-space:nowrap;margin-bottom:17px}.hero h1.game-title span{font-size:16px;letter-spacing:1px}.hero p .hero-lead{display:block;font-size:17px;font-weight:800;color:var(--ink);margin-bottom:4px}.result-ten[data-cleared="false"]:after{content:"DEFEATED"}.clock-caption{position:absolute;bottom:-12px;left:0;right:0;font:700 8px var(--mono);letter-spacing:1px;text-align:center;color:var(--muted)}
+</style>
+</head>
+<body>
+<noscript><div class="noscript">このゲームを遊ぶには、ブラウザのJavaScriptを有効にしてください。</div></noscript>
+<main class="app" id="app">
+  <header class="masthead"><div class="wordmark"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span>ｳｪｰｲ / 10</div><div class="tools"><button class="icon-button" id="soundButton" aria-label="効果音をオンにする" aria-pressed="false" title="効果音">♪</button><button class="icon-button" id="rulesButton" aria-label="ルールを見る" title="ルール">?</button></div></header>
+  <section id="homeScreen" aria-label="タイトル画面">
+    <div class="hero"><div class="eyebrow">10 RIVALS. 100 SECONDS.</div><h1 class="game-title">(☝ ՞ਊ ՞)☝ｳｪｰｲ<br><span>←このゲーム</span></h1><p><span class="hero-lead">指で、駆け抜けろ。</span>1体10秒。10体すべてを、100秒以内に。</p></div>
+    <div class="ten-art" aria-hidden="true"><div class="big-ten">10</div><div class="hero-hand" id="heroHand"></div><div class="art-tag">FINGER SPEEDRUN</div></div>
+    <div class="specs"><div class="spec"><strong>10<small>体</small></strong><span>AIを倒せ</span></div><div class="spec"><strong>10<small>秒</small></strong><span>1体の制限時間</span></div><div class="spec"><strong>100<small>秒</small></strong><span>全体の制限時間</span></div></div>
+    <button class="primary" id="startButton">10体撃破に挑戦 <span class="arrow" aria-hidden="true">↗</span></button>
+    <p class="start-note">あなたは後攻。分け直しなし。<br>時間切れ・両手の脱落でゲームオーバー。</p>
+    <div class="best-line"><span>PERSONAL BEST</span><strong id="homeBest">— — . — —</strong></div>
+    <div class="mini-instruction"><span class="step-bubble">1</span><span><b>自分の手</b>を選ぶ</span><span aria-hidden="true">→</span><span class="step-bubble">2</span><span><b>相手の手</b>を叩く</span></div>
+    <div class="footer">NO SPLIT. JUST TAP.</div>
+  </section>
+  <section id="gameScreen" hidden aria-label="対戦画面">
+    <div class="run-summary"><div><div class="label">TOTAL LEFT / 100 SEC</div><div class="elapsed" id="elapsed">01:40<small>.00</small></div></div><div><div class="label">DEFEATED</div><div class="progress-count"><span id="winCount">0</span><small> / 10</small></div></div></div>
+    <div class="progress-dots" id="progressDots" aria-label="10体中0体撃破"></div>
+    <div class="battle" id="battle">
+      <div class="player-label"><div class="player-identity"><div class="avatar" id="cpuAvatar" aria-hidden="true">01</div><div><div class="name" id="cpuName">ウォームアップ</div><span class="subtitle" id="cpuSubtitle">OPPONENT 01 / 10</span></div></div><span class="chip" id="cpuLevel">EASY</span></div>
+      <div class="hands" aria-label="相手の手"><button class="hand" id="cpuHand0" disabled></button><button class="hand" id="cpuHand1" disabled></button></div>
+      <div class="turn-center"><div class="clock" id="clock" aria-label="このAIとの対戦の残り時間"><svg viewBox="0 0 52 52" aria-hidden="true"><circle class="clock-track" cx="26" cy="26" r="22"/><circle class="clock-progress" id="clockRing" cx="26" cy="26" r="22"/></svg><strong id="turnSeconds">10</strong><span class="clock-caption">AI / SEC</span></div><div class="turn-copy"><strong id="turnTitle">準備はいい？</strong><span id="turnHint">自分の手 → 相手の手の順にタップ</span></div><span class="turn-tag" id="turnTag">READY</span></div>
+      <div class="player-label"><div class="player-identity you-identity"><div class="avatar" aria-hidden="true">Y</div><div><div class="name">あなた</div><span class="subtitle">PLAYER / SECOND</span></div></div><span class="chip you">YOUR HANDS</span></div>
+      <div class="hands" aria-label="自分の手"><button class="hand you" id="youHand0" disabled></button><button class="hand you" id="youHand1" disabled></button></div>
+      <div class="overlay" id="battleOverlay" hidden><div class="overlay-kicker" id="overlayKicker">GET READY</div><div class="overlay-number" id="overlayNumber">3</div><h2 id="overlayTitle" hidden></h2><p id="overlayText">10体を、最速で。</p></div>
+    </div>
+    <div class="action-log" id="actionLog" role="status" aria-live="polite">CPUが先攻。あなたは後攻です。</div>
+    <div class="game-bottom"><span>時計は手番が変わってもリセットされません</span><button class="text-button" id="quitButton">やり直す</button></div>
+    <div class="footer">TAP. THINK. TEN.</div>
+  </section>
+  <section class="result" id="resultScreen" hidden aria-label="結果画面">
+    <div class="eyebrow" id="resultKicker">MISSION COMPLETE</div><h1 class="clear-title" id="resultTitle">10体、<span>撃破。</span></h1><div class="result-sub" id="resultSubtitle">その指、なかなか速い。<br>次は、このタイムを超えよう。</div><div class="result-ten" id="resultMedal" aria-hidden="true">10</div>
+    <div class="record-card"><div class="label" id="resultTimeLabel">YOUR CLEAR TIME</div><div class="record-time" id="resultTime">00:00<small>.00</small></div><div class="new-record" id="newRecord" hidden>NEW PERSONAL BEST ↗</div><div class="label" id="previousBest"></div></div>
+    <div class="result-stats"><div class="result-stat"><strong id="resultTaps">0</strong><span>攻撃した回数</span></div><div class="result-stat"><strong id="resultWins">0 / 10</strong><span>撃破したAI</span></div></div>
+    <button class="primary" id="againButton">もう一度、挑戦 <span class="arrow" aria-hidden="true">↗</span></button><button class="secondary" id="shareButton">結果をコピー</button><button class="text-button" id="homeButton">タイトルへ</button>
+    <div class="split-list"><button class="split-toggle" id="splitToggle" aria-expanded="false" aria-controls="splits">相手ごとのタイム <span id="splitArrow" aria-hidden="true">＋</span></button><ol class="splits" id="splits" hidden></ol></div><div class="footer" id="resultFooter">TEN DOWN. YOUR TIME IS THE TARGET.</div>
+  </section>
+</main>
+<dialog id="rulesDialog" aria-labelledby="rulesTitle"><div class="eyebrow">HOW TO PLAY</div><h2 id="rulesTitle">指の数で、攻める。</h2><ol class="rule-list"><li>お互い<b>左右1本ずつ</b>からスタート。</li><li><b>自分の手 → 相手の手</b>の順にタップ。自分の本数が、相手の手に足されます。</li><li><b>5本以上になった手は脱落</b>。余りは繰り越しません。両手が脱落すると負け。</li><li><b>左右の分け直し・脱落した手の復活はなし</b>。</li><li><b>AI1体を10秒以内に撃破</b>。手番が変わっても、その対戦の時計はリセットされません。</li><li><b>10体すべてを合計100秒以内に撃破</b>。AIの思考中・相手の切り替え中も合計タイムは進みます。</li><li><b>どちらかの時間切れ・両手の脱落でゲームオーバー</b>。最初のAIから再挑戦できます。</li></ol><div class="rule-example">自分 2 ＋ 相手 3 → 相手 OUT<small>攻撃した自分の指は、変わりません。</small></div><p>10戦ともAIが先攻、あなたが後攻です。このルールでは後攻に必勝手順があります。AIの手順と考える時間は毎回同じ。後半ほど手強くなります。</p><p>自己ベストはこのブラウザに保存されます（保存に対応した環境のみ）。対戦中に画面を切り替えても時計は止まりません。</p><button class="primary" id="closeRulesButton">わかった、挑もう</button></dialog>
+<dialog id="quitDialog" aria-labelledby="quitTitle"><h2 id="quitTitle">最初からやり直す？</h2><p>今の挑戦を終えて、タイトルに戻ります。<br>この画面を開いている間もタイムは進みます。</p><button class="primary" id="confirmQuitButton">タイトルへ戻る</button><button class="secondary" id="cancelQuitButton">対戦を続ける</button></dialog>
+<div class="toast" id="toast" role="status" hidden></div>
+<div class="sr-only" id="announcement" role="status" aria-live="polite"></div>
+<script>
+'use strict';
+/* Offline, single-file game. No network requests or external assets. */
+const GameRules = (() => {
+  const moves = (own, other) => own.flatMap((n,from) => n ? other.flatMap((m,to) => m ? [{from,to}] : []) : []);
+  function attack(own,other,move) { const next=other.slice(); const sum=own[move.from]+next[move.to]; next[move.to]=sum>=5?0:sum; return next; }
+  const memo=new Map();
+  function solve(own,other) {
+    if(own.every(n=>n===0)) return {value:-1,plies:0};
+    if(other.every(n=>n===0)) return {value:1,plies:0};
+    const key=own.slice().sort().join('')+'|'+other.slice().sort().join('');
+    if(memo.has(key)) return memo.get(key);
+    let best={value:-2,plies:0};
+    for(const move of moves(own,other)) {
+      const child=solve(attack(own,other,move),own);
+      const candidate={value:-child.value,plies:child.plies+1};
+      if(candidate.value>best.value || (candidate.value===best.value && (candidate.value>0?candidate.plies<best.plies:candidate.plies>best.plies))) best=candidate;
+    }
+    memo.set(key,best); return best;
+  }
+  function rankedMoves(own,other) {
+    return moves(own,other).map(move=> {const child=solve(attack(own,other,move),own);return {...move,value:-child.value,plies:child.plies+1};})
+      .sort((a,b)=>b.value-a.value || (a.value>0?a.plies-b.plies:b.plies-a.plies) || a.from-b.from || a.to-b.to);
+  }
+  return {moves,attack,solve,rankedMoves};
+})();
+
+const $ = id => document.getElementById(id);
+const rivals=[
+ {name:'ウォームアップ',tag:'EASY',mistake:.85,color:'#baa8ff'},
+ {name:'マイペース',tag:'EASY',mistake:.72,color:'#9fc6f6'},
+ {name:'いたずら指',tag:'EASY',mistake:.62,color:'#f4bf86'},
+ {name:'かけひき上手',tag:'NORMAL',mistake:.45,color:'#b1d5a6'},
+ {name:'ポーカーフェイス',tag:'NORMAL',mistake:.32,color:'#dfabe7'},
+ {name:'カウンター',tag:'NORMAL',mistake:.22,color:'#93d7d3'},
+ {name:'スピードスター',tag:'HARD',mistake:.12,color:'#ffb19d'},
+ {name:'読みの達人',tag:'EXPERT',mistake:0,color:'#c5b2ff'},
+ {name:'門番',tag:'EXPERT',mistake:0,color:'#f3c76e'},
+ {name:'ラスト・テン',tag:'FINAL BOSS',mistake:0,color:'#ff9867'}
+];
+const BEST_KEY='chopsticks10.best.v2';
+const BATTLE_MS=10000, TOTAL_MS=100000, CPU_DELAY=350;
+let best=loadBest();
+let state={phase:'home',running:false,round:0,wins:0,taps:0,you:[1,1],cpu:[1,1],selected:null,start:0,roundStart:0,deadline:0,splits:[],seed:1,finalMs:0,cleared:false};
+let tasks=new Set(), tickId=0, soundOn=false, audioContext=null, toastTask=null;
+
+function loadBest(){try{const n=Number(localStorage.getItem(BEST_KEY));return Number.isFinite(n)&&n>0?n:null;}catch{return null;}}
+function saveBest(ms){try{localStorage.setItem(BEST_KEY,String(ms));return true;}catch{return false;}}
+function timeParts(ms){const cs=Math.floor(Math.max(0,ms)/10);return {main:String(Math.floor(cs/6000)).padStart(2,'0')+':'+String(Math.floor(cs/100)%60).padStart(2,'0'),dec:String(cs%100).padStart(2,'0')};}
+function formatTime(ms){const t=timeParts(ms);return t.main+'.'+t.dec;}
+function timeMarkup(ms){const t=timeParts(ms);return t.main+'<small>.'+t.dec+'</small>';}
+function schedule(fn,ms){const id=setTimeout(()=>{tasks.delete(id);fn();},ms);tasks.add(id);return id;}
+function clearTasks(){for(const id of tasks)clearTimeout(id);tasks.clear();cancelAnimationFrame(tickId);}
+function setScreen(which){for(const name of ['home','game','result'])$(name+'Screen').hidden=name!==which;document.body.classList.toggle('game',which==='game');window.scrollTo(0,0);}
+function random(){state.seed^=state.seed<<13;state.seed^=state.seed>>>17;state.seed^=state.seed<<5;return (state.seed>>>0)/4294967296;}
+function say(message){$('announcement').textContent=message;}
+function sound(type){
+  if(!soundOn)return;
+  try{if(!audioContext)audioContext=new (window.AudioContext||window.webkitAudioContext)();if(audioContext.state==='suspended')audioContext.resume();
+    const frequencies=type==='win'?[523,659,784]:type==='lose'?[220,165]:type==='tap'?[440,660]:[550];
+    frequencies.forEach((freq,i)=>{const oscillator=audioContext.createOscillator(),gain=audioContext.createGain(),t=audioContext.currentTime+i*.08;oscillator.type='sine';oscillator.frequency.value=freq;gain.gain.setValueAtTime(.055,t);gain.gain.exponentialRampToValueAtTime(.001,t+.13);oscillator.connect(gain);gain.connect(audioContext.destination);oscillator.start(t);oscillator.stop(t+.14);});
+  }catch{soundOn=false;updateSound();}
+}
+function updateSound(){$('soundButton').setAttribute('aria-pressed',String(soundOn));$('soundButton').setAttribute('aria-label',soundOn?'効果音をオフにする':'効果音をオンにする');$('soundButton').style.color=soundOn?'var(--lime)':'var(--muted)';}
+function handSvg(n){
+  const stroke='stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"';
+  if(!n)return `<svg viewBox="0 0 130 145" aria-hidden="true"><path d="M36 75 Q30 53 43 53 L88 53 Q104 53 105 70 L105 100 Q105 128 78 128 L62 128 Q36 128 32 102 L24 88 Q20 76 30 73 Q37 73 44 86 L58 94" fill="none" ${stroke}/><path d="M49 55 L49 74 M64 55 L64 73 M79 55 L79 74 M94 57 L94 77" fill="none" ${stroke}/></svg>`;
+  const xs=[40,58,76,94],ys=[25,14,21,38];
+  let fingers='';
+  for(let i=0;i<4;i++)fingers+=`<rect x="${xs[i]-7}" y="${i<n?ys[i]:64}" width="14" height="${i<n?90-ys[i]:28}" rx="7" fill="var(--panel)" ${stroke}/>`;
+  return `<svg viewBox="0 0 130 145" aria-hidden="true">${fingers}<path d="M33 77 L104 77 L104 101 Q104 128 80 128 L60 128 Q39 128 31 110 L19 88 Q15 78 23 75 Q32 70 41 87 L52 94" fill="var(--panel)" ${stroke}/><path d="M54 106 Q72 110 85 105" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>`;
+}
+function drawHand(owner,index){
+  const n=state[owner][index],button=$(owner+'Hand'+index),isYou=owner==='you';
+  const target=!isYou && state.phase==='player' && state.selected!==null && n>0;
+  button.className='hand'+(isYou?' you':'')+(!n?' dead':'')+(isYou&&state.selected===index?' selected':'')+(target?' targetable':'');
+  button.innerHTML=`<span class="hand-side">${index===0?'左':'右'}</span><span class="graphic ${index===0?'left':''}">${handSvg(n)}</span><span class="hand-info">${n?n+'<small>本</small>':'OUT'}</span>`;
+  button.disabled=state.phase!=='player'||n===0||(!isYou&&state.selected===null);
+  button.setAttribute('aria-label',`${isYou?'自分':'相手'}の${index===0?'左':'右'}手、${n?n+'本':'脱落'}${target?'、攻撃する':''}`);
+  if(isYou)button.setAttribute('aria-pressed',String(state.selected===index));
+}
+function renderHands(){for(let i=0;i<2;i++){drawHand('you',i);drawHand('cpu',i);}}
+function renderProgress(){
+  $('winCount').textContent=state.wins;
+  $('progressDots').innerHTML=Array.from({length:10},(_,i)=>`<span class="progress-dot ${i<state.wins?'done':i===state.round?'current':''}"></span>`).join('');
+  $('progressDots').setAttribute('aria-label',`10体中${state.wins}体撃破`);
+}
+function overlay({kicker='',number='',title='',text='',lose=false}){
+  $('battleOverlay').hidden=false;$('battleOverlay').classList.toggle('lose',lose);
+  $('overlayKicker').textContent=kicker;$('overlayNumber').textContent=number;$('overlayNumber').hidden=!number;
+  $('overlayTitle').textContent=title;$('overlayTitle').hidden=!title;$('overlayText').textContent=text;
+}
+function updateClock(remaining){
+  const secs=Math.max(0,remaining)/1000;
+  $('turnSeconds').textContent=remaining<=0?'0':secs>3?String(Math.ceil(secs)):secs.toFixed(1);
+  $('clockRing').style.strokeDashoffset=String(138.23*(1-Math.max(0,remaining)/BATTLE_MS));
+  $('clock').classList.toggle('urgent',remaining>0&&remaining<=3000&&state.phase!=='between');
+}
+function tick(){
+  if(!state.running)return;
+  const now=Date.now();$('elapsed').innerHTML=timeMarkup(TOTAL_MS-(now-state.start));
+  if(now-state.start>=TOTAL_MS){finishRun(false,'total');return;}
+  if(state.phase==='player'||state.phase==='cpu'||state.phase==='resolving'){
+    const remaining=state.deadline-now;updateClock(remaining);
+    if(remaining<=0){finishRun(false,'timeout');return;}
+  }
+  tickId=requestAnimationFrame(tick);
+}
+function startRun(){
+  clearTasks();$('rulesDialog').close();$('quitDialog').close();
+  state={phase:'countdown',running:false,round:0,wins:0,taps:0,you:[1,1],cpu:[1,1],selected:null,start:0,roundStart:0,deadline:0,splits:[],seed:1,finalMs:0,cleared:false};
+  setScreen('game');renderProgress();prepareRound();$('elapsed').innerHTML=timeMarkup(TOTAL_MS);$('actionLog').textContent='AIが先攻。あなたは後攻です。';
+  $('turnTitle').textContent='準備はいい？';$('turnHint').textContent='1体10秒、合計100秒。';$('turnTag').textContent='READY';$('turnTag').classList.remove('cpu');updateClock(BATTLE_MS);
+  for(let i=0;i<3;i++)schedule(()=>{overlay({kicker:'GET READY',number:String(3-i),text:'1体10秒。10体すべてを倒せ。'});sound('ready');},i*650);
+  schedule(()=>{state.start=Date.now();state.roundStart=state.start;state.deadline=state.start+BATTLE_MS;state.running=true;$('battleOverlay').hidden=true;beginTurn('cpu');tick();},1950);
+}
+function prepareRound(){
+  state.you=[1,1];state.cpu=[1,1];state.selected=null;state.seed=(0x51f15e+state.round*7919)>>>0;
+  const rival=rivals[state.round];$('cpuName').textContent=rival.name;$('cpuSubtitle').textContent=`OPPONENT ${String(state.round+1).padStart(2,'0')} / 10`;
+  $('cpuAvatar').textContent=String(state.round+1).padStart(2,'0');$('cpuAvatar').style.background=rival.color;$('cpuLevel').textContent=rival.tag;renderHands();
+}
+function beginTurn(who){
+  if(!state.running)return;
+  if(!checkTime())return;
+  state.phase=who==='cpu'?'cpu':'player';state.selected=null;renderHands();updateClock(state.deadline-Date.now());
+  $('turnTitle').textContent=who==='cpu'?'相手のターン':'自分の手を選ぼう';
+  $('turnHint').textContent=who==='cpu'?'時計は進む。次の一手を考えよう。':'使う指の本数をタップ。';
+  $('turnTag').textContent=who==='cpu'?'CPU':'YOU';$('turnTag').classList.toggle('cpu',who==='cpu');
+  if(who==='cpu')schedule(cpuPlay,CPU_DELAY);
+  else say(`あなたのターン。自分の手を選んでください。対戦の残り時間は${Math.max(0,Math.ceil((state.deadline-Date.now())/1000))}秒。`);
+}
+function cpuPlay(){
+  if(!state.running||state.phase!=='cpu')return;
+  if(!checkTime())return;
+  // Fixed random seed per opponent keeps decisions repeatable across runs.
+  const ranked=GameRules.rankedMoves(state.cpu,state.you);
+  const pick=random()<rivals[state.round].mistake ? ranked[Math.floor(random()*ranked.length)] : ranked[0];
+  performMove('cpu',pick);
+}
+function selectHand(index){
+  if(state.phase!=='player'||!state.you[index])return;
+  if(!checkTime())return;
+  state.selected=state.selected===index?null:index;renderHands();
+  $('turnTitle').textContent=state.selected===null?'自分の手を選ぼう':'相手の手を叩こう';
+  $('turnHint').textContent=state.selected===null?'使う指の本数をタップ。':`${state.you[state.selected]}本を、相手の手に足します。`;
+  sound('select');
+}
+function attackTarget(index){
+  if(state.phase!=='player'||state.selected===null||!state.cpu[index])return;
+  if(!checkTime())return;
+  performMove('you',{from:state.selected,to:index});
+}
+function checkTime(){
+  if(Date.now()-state.start>=TOTAL_MS){finishRun(false,'total');return false;}
+  if(Date.now()>=state.deadline){finishRun(false,'timeout');return false;}
+  return true;
+}
+function performMove(owner,move){
+  if(!state.running||!checkTime())return;
+  const other=owner==='you'?'cpu':'you',old=state[other][move.to],add=state[owner][move.from],sum=old+add;
+  state.phase='resolving';state.selected=null;state[other]=GameRules.attack(state[owner],state[other],move);
+  if(owner==='you')state.taps++;
+  renderHands();$(other+'Hand'+move.to).classList.add('hit');
+  $('actionLog').textContent=`${owner==='you'?'あなた':'CPU'}の${move.from===0?'左':'右'}手 ${add} ＋ ${other==='you'?'あなた':'CPU'}の${move.to===0?'左':'右'}手 ${old} → ${sum>=5?'OUT':sum+'本'}`;
+  sound('tap');
+  if(state[other].every(n=>n===0)){endRound(owner==='you','hands');return;}
+  schedule(()=>beginTurn(owner==='you'?'cpu':'you'),160);
+}
+function endRound(won,reason){
+  if(!state.running||state.phase==='between'||state.phase==='result')return;
+  state.phase='between';state.selected=null;renderHands();updateClock(0);
+  if(won){
+    state.wins++;state.splits.push({name:rivals[state.round].name,ms:Date.now()-state.roundStart});renderProgress();sound('win');
+    if(state.wins===10){finishRun(true);return;}
+    overlay({kicker:`${String(state.wins).padStart(2,'0')} / 10 DEFEATED`,title:'撃破！',text:`次は「${rivals[state.round+1].name}」。`});say(`${state.wins}体目を撃破。`);
+    schedule(()=>{state.round++;state.roundStart=Date.now();state.deadline=state.roundStart+BATTLE_MS;prepareRound();renderProgress();$('battleOverlay').hidden=true;$('actionLog').textContent=`${state.round+1}体目。AIが先攻です。`;beginTurn('cpu');},550);
+  }else{
+    finishRun(false,reason);
+  }
+}
+function finishRun(cleared,reason='hands'){
+  if(!state.running)return;
+  state.finalMs=Date.now()-state.start;state.cleared=cleared;state.running=false;state.phase='result';clearTasks();$('quitDialog').close();$('rulesDialog').close();
+  const previous=best,isBest=cleared&&(previous===null||state.finalMs<previous);
+  if(isBest){best=state.finalMs;if(!saveBest(best))toast('この環境では自己ベストを保存できません。');}
+  $('resultKicker').textContent=cleared?'MISSION COMPLETE':'GAME OVER';
+  $('resultFooter').textContent=cleared?'TEN DOWN. YOUR TIME IS THE TARGET.':'TRY AGAIN. FIND YOUR NEXT MOVE.';
+  $('resultTitle').innerHTML=cleared?'10体、<span>撃破。</span>':reason==='hands'?'両手、<span>脱落。</span>':'時間、<span>切れ。</span>';
+  $('resultSubtitle').innerHTML=cleared?'その指、なかなか速い。<br>次は、このタイムを超えよう。':reason==='total'?'100秒の制限時間に到達。<br>次は、もっと速く。':reason==='timeout'?`${state.round+1}体目を10秒以内に倒せなかった。<br>もう一度、挑もう。`:`「${rivals[state.round].name}」に敗北。<br>次の一手を見つけよう。`;
+  $('resultMedal').textContent=state.wins;$('resultMedal').style.color=cleared?'var(--lime)':'var(--muted)';$('resultMedal').setAttribute('data-cleared',String(cleared));
+  $('resultTimeLabel').textContent=cleared?'YOUR CLEAR TIME':'TIME PLAYED';
+  $('resultTime').innerHTML=timeMarkup(state.finalMs);$('resultTaps').textContent=state.taps;$('resultWins').textContent=state.wins+' / 10';$('newRecord').hidden=!isBest;
+  $('previousBest').textContent=previous===null?(cleared?'FIRST CLEAR!':'目指せ、10体撃破。'):`BEST ${formatTime(isBest?state.finalMs:previous)}`;
+  $('splits').innerHTML=state.splits.map((split,i)=>`<li><span>${String(i+1).padStart(2,'0')} · ${split.name}</span><b>${formatTime(split.ms)}</b></li>`).join('');
+  $('splits').hidden=true;$('splitToggle').hidden=state.splits.length===0;$('splitToggle').setAttribute('aria-expanded','false');$('splitArrow').textContent='＋';updateBest();setScreen('result');$('againButton').focus({preventScroll:true});
+  if(cleared){say(`10体撃破。クリアタイムは${formatTime(state.finalMs)}。`);celebrate();}else{sound('lose');say(`ゲームオーバー。${state.wins}体撃破。`);}
+}
+function updateBest(){$('homeBest').textContent=best===null?'— — . — —':formatTime(best);}
+function goHome(){clearTasks();state.running=false;state.phase='home';$('quitDialog').close();$('rulesDialog').close();$('battleOverlay').hidden=true;updateBest();setScreen('home');$('startButton').focus({preventScroll:true});}
+function toast(message){clearTimeout(toastTask);$('toast').textContent=message;$('toast').hidden=false;toastTask=setTimeout(()=>{$('toast').hidden=true;},2600);}
+function celebrate(){
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  for(let i=0;i<26;i++){const bit=document.createElement('span');bit.className='confetti';bit.style.left=(Math.random()*100)+'%';bit.style.background=['#d9fa69','#baa8ff','#ff9867'][i%3];bit.style.animationDelay=(Math.random()*.4)+'s';document.body.appendChild(bit);setTimeout(()=>bit.remove(),2500);}
+}
+async function copyResult(){
+  const message=`(☝ ՞ਊ ՞)☝ｳｪｰｲ ←このゲーム\n${state.wins}/10体撃破${state.cleared?'！':''} / ${state.cleared?'クリアタイム':'プレイ時間'} ${formatTime(state.finalMs)}\n1体10秒、合計100秒。指の分け直しなし。`;
+  try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(message);}else{
+    const field=document.createElement('textarea');field.value=message;field.style.cssText='position:fixed;left:-9999px;top:0';document.body.appendChild(field);field.select();const copied=document.execCommand('copy');field.remove();if(!copied)throw new Error('copy unavailable');
+  }toast('結果をコピーしました。');}catch{window.prompt('結果のテキストをコピーしてください。',message);}
+}
+$('startButton').addEventListener('click',startRun);$('againButton').addEventListener('click',startRun);$('homeButton').addEventListener('click',goHome);
+$('rulesButton').addEventListener('click',()=>{$('rulesDialog').showModal();});$('closeRulesButton').addEventListener('click',()=>{$('rulesDialog').close();});
+$('soundButton').addEventListener('click',()=>{soundOn=!soundOn;updateSound();if(soundOn)sound('select');});
+$('quitButton').addEventListener('click',()=>{$('quitDialog').showModal();});$('confirmQuitButton').addEventListener('click',goHome);$('cancelQuitButton').addEventListener('click',()=>{$('quitDialog').close();});
+$('shareButton').addEventListener('click',copyResult);$('splitToggle').addEventListener('click',()=>{const expanded=$('splitToggle').getAttribute('aria-expanded')!=='true';$('splitToggle').setAttribute('aria-expanded',String(expanded));$('splits').hidden=!expanded;$('splitArrow').textContent=expanded?'−':'＋';});
+for(let i=0;i<2;i++){$('youHand'+i).addEventListener('click',()=>selectHand(i));$('cpuHand'+i).addEventListener('click',()=>attackTarget(i));}
+document.addEventListener('visibilitychange',()=>{
+  if(!document.hidden&&state.running&&state.phase!=='between')checkTime();
+});
+// Rules stay available throughout the run; opening them does not pause the clocks.
+$('heroHand').innerHTML=handSvg(2);$('progressDots').innerHTML='<span class="progress-dot"></span>'.repeat(10);updateBest();updateSound();renderHands();
+</script>
+</body>
+</html>
